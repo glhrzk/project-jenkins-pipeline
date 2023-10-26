@@ -1,9 +1,12 @@
 pipeline {
-    agent {
-        node {
-            label "linux && java11"
-        }
-    }
+//     agent {
+//         node {
+//             label "linux && java11"
+//         }
+//     }
+
+    agent none
+
     stages {
         stage("Build"){
             steps {
