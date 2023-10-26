@@ -3,8 +3,10 @@ pipeline {
 
     stages {
         stage("Build"){
-            node {
-                label "linux && java11"
+            agent {
+                node {
+                    label "linux && java11"
+                }
             }
 
             steps {
@@ -23,8 +25,10 @@ pipeline {
         }
 
         stage("Test"){
-             node {
-                label "linux && java11"
+            agent {
+                node {
+                    label "linux && java11"
+                }
             }
 
             steps {
