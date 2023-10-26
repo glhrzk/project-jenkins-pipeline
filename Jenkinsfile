@@ -8,12 +8,14 @@ pipeline {
         stage("Build"){
             steps {
                 echo("Hello Build")
+                sh "error"
             }
         }
 
         stage("Test"){
             steps {
                 echo("Hello Test")
+                sh "error"
             }
         }
 
