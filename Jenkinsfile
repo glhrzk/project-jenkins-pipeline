@@ -7,17 +7,17 @@ pipeline {
     stages {
         stage("Build"){
             steps {
-                echo "Hello Build 1"
-                echo "Hello Build 2"
-                echo "Hello Build 3"
+            echo("start Build")
+            sh("./mvnw clean compile test-compile")
+            echo("finish Build")
             }
         }
 
         stage("Test"){
             steps {
-                echo "Hello Test 1"
-                echo "Hello Test 2"
-                echo "Hello Test 3"
+                echo("start test")
+                echo("./mvnw test")
+                echo("finish test")
             }
         }
 
