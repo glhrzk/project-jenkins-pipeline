@@ -17,7 +17,6 @@ pipeline {
         stage("Test"){
             steps {
                 echo("start test")
-                sh("chmod +x mvnw")
                 echo("./mvnw test")
                 echo("finish test")
             }
