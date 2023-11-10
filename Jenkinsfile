@@ -9,6 +9,7 @@ pipeline {
         stage('Build'){
            steps {
             echo("Start Build")
+            sh("chmod 777 mvnw")
             sh("./mvnw clean compile test-compile")
             echo("Finish Build")
            }
