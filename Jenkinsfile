@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label "windows"
+            label "linux"
         }
     }
 
@@ -11,5 +11,24 @@ pipeline {
                 echo 'Hello World'
             }
         }
+    }
+
+    post {
+        always {
+            echo "I will always say Hello!"
+        }
+
+        success {
+            echo "Yay, Build Success"
+        }
+
+        failure {
+            echo "Oh no, Build Failure"
+        }
+
+        cleanup {
+            echo "Its time to cleanup!"
+        }
+
     }
 }
