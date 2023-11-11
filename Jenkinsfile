@@ -6,6 +6,10 @@ pipeline {
         EMAIL = "galihrizki23@gmail.com"
     }
 
+    options {
+        disableConCurrentBuilds()
+    }
+
     stages {
         stage('Prepare'){
         environment {
