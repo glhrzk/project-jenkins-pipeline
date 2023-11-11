@@ -46,6 +46,7 @@ pipeline {
                }
 
             echo("Start Test")
+            sh("chmod 777 mvnw")
             sh("./mvnw test")
             echo("Finish Test")
            }
