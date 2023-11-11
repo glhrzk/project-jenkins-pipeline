@@ -7,7 +7,7 @@ pipeline {
     }
 
     options {
-        disableConCurrentBuilds()
+        disableConcurrentBuilds()
     }
 
     stages {
