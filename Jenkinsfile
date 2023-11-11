@@ -20,8 +20,7 @@ pipeline {
 
            steps {
             echo("Author: ${AUTHOR}")
-            echo("App User: ${APP_USR}")
-            sh('echo "App Password ${APP_PSW} > "rahasia.txt"')
+            sh('echo "App Password ${APP_PSW}" > "rahasia.txt"')
             echo("Email: ${EMAIL}")
             echo("Start Job: ${env.JOB_NAME}")
             echo("Start Build: ${env.BUILD_NUMBER}")
