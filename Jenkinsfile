@@ -35,12 +35,16 @@ pipeline {
             }
 
             stages {
-                stage("Prepare Java") {
-                    echo("prepare for Java")
+                stage('Prepare Java') {
+                    steps {
+                        echo("prepare for Java")
+                    }
                 }
 
-                stage("Prepare Golang") {
-                    echo("prepare for Golang")
+                stage('Prepare Golang') {
+                    steps {
+                        echo("prepare for Golang")
+                    }
                 }
             }
         }
