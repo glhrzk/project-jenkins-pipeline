@@ -224,7 +224,13 @@ pipeline {
             }
 
            steps {
-           echo("Release it")
+                withCredentials([usernamePassword(
+                    credentialsId: "galih_ganteng"
+                    usernameVariable: "USER"
+                    passwordVariable : "PASSWORD"
+                )]) {
+                    sh('echo "Release it with -u $USER -p $PASSWORD" > "release.txt"')
+                }
            }
 
         }
