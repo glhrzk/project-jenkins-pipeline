@@ -6,6 +6,10 @@ pipeline {
         EMAIL = "galihrizki23@gmail.com"
     }
 
+    triggers {
+        cron("*/5 * * * *")
+    }
+
     parameters {
         string(name: 'NAME', defaultValue: 'Guest', 'description': 'What is your name?')
         text(name: 'DESCRIPTIONS', defaultValue: '', 'description': 'Tell me about yo')
