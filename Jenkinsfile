@@ -10,7 +10,7 @@ pipeline {
         string(name: 'NAME', defaultValue: 'Guest', 'description': 'What is your name?')
         text(name: 'DESCRIPTIONS', defaultValue: '', 'description': 'Tell me about yo')
         booleanParam(name: 'DEPLOY', defaultValue: false, 'description': 'Need to Deploy?')
-        choice(name: 'SOCIAL_MEDIA', choice: ['Instagram', 'Facebook', Twitter], 'description': 'Which social media')
+        choice(name: 'SOCIAL_MEDIA', choice: ['Instagram', 'Facebook', 'Twitter'], 'description': 'Which social media')
         password(name: 'SECRET', defaultValue: 'Guest', 'description': 'Encrypt Key?')
     }
 
