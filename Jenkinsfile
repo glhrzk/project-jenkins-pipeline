@@ -27,6 +27,24 @@ pipeline {
     }
 
     stages {
+        stage('Preparation'){
+            agent {
+                node {
+                    label "linux"
+                }
+            }
+
+            stages {
+                stage('Prepare Java') {
+                    echo("prepare for Java")
+                }
+
+                stage('Prepare Golang') {
+                    echo("prepare for Golang")
+                }
+            }
+        }
+
          stage('Parameter'){
             agent {
                 node {
