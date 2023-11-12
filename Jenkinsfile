@@ -27,21 +27,25 @@ pipeline {
     }
 
     stages {
-        stage('Preparation'){
-            agent {
-                node {
-                    label "linux"
-                }
-            }
-
+        parallel('Preparation'){
             stages {
                 stage('Prepare Java') {
+                    agent {
+                        node {
+                            label "linux"
+                        }
+                    }
                     steps {
                         echo("prepare for Java")
                     }
                 }
 
                 stage('Prepare Golang') {
+                    agent {
+                        node {
+                            label "linux"
+                        }
+                    }
                     steps {
                         echo("prepare for Golang")
                     }
