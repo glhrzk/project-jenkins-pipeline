@@ -27,6 +27,7 @@ pipeline {
     }
 
     stages {
+    failFast true
         stage('Preparation'){
             parallel {
                 stage('Prepare Java') {
