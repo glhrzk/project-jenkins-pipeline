@@ -20,7 +20,7 @@ pipeline {
     }
 
     stages {
-         stage('Prepare'){
+         stage('Parameter'){
             agent {
                 node {
                     label "linux"
