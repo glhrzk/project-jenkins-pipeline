@@ -27,8 +27,8 @@ pipeline {
     }
 
     stages {
-        parallel('Preparation'){
-            stages {
+        stage('Preparation'){
+            parallel {
                 stage('Prepare Java') {
                     agent {
                         node {
