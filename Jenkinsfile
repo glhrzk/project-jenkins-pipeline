@@ -121,6 +121,9 @@ pipeline {
             message "Can we deploy?"
             ok "Yes, of cource"
             submitter "glhrzk"
+            parameters{
+                choice{name: "TARGET_ENV", choices['DEV', 'QA', 'PROD'], descriptions: "Which Environment?" }
+            }
            }
 
 
@@ -131,10 +134,7 @@ pipeline {
             }
 
            steps {
-            echo("Deploy 1")
-            sleep(5)
-            echo("Deploy 2")
-            echo("Deploy 3")
+           echo("Deploy to ${TARGET_ENV}")
            }
         }
     }
