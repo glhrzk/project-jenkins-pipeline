@@ -27,37 +27,6 @@ pipeline {
     }
 
     stages {
-        stage('Setup Matrix OS'){
-            failFast true
-            matrix {
-                axes {
-                    axis {
-                        name "OS"
-                        values "linux", "windows", "mac"
-                    }
-                    axis {
-                        name "architecture"
-                        values "32", "64"
-                    }
-                }
-
-                stages {
-                stage('Setup OS'){
-                    agent {
-                        node {
-                            label "linux"
-                        }
-                    }
-                    steps {
-                        echo("Setup ${OS} ${architecture}")
-                    }
-                }
-            }
-            }
-
-        }
-
-
         stage('Preparation'){
             failFast true
             parallel {
