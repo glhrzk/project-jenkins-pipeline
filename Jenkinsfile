@@ -40,7 +40,6 @@ pipeline {
                         values "32", "64"
                     }
                 }
-
                 stages {
                     stage('Setup OS'){
                         agent {
